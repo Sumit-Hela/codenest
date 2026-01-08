@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Poppins]">
+  <style>
+    :root{
+      --black:#262626;
+      --orange:#F57E20;
+      --yellow:#FDB514;
+    }
+    #bg-main{
+      background: url('./img/codenest.png') no-repeat center center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 90%, 100%;
+    }
+  </style>
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<div class="bg-white">
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+      <div class="flex lg:flex-1">
+        <a href="/src/index.html" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img src="./img/logo.png" alt="" class="h-8 w-auto" />
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Home</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Projects</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">About</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Components</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm/6 font-semibold text-[var(--orange)]">Get in touch <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <el-dialog>
+      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img src="./img/logo.png" alt="" class="h-8 w-auto" />
+              </a>
+              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+  </header>
+
+  <!-- hero-main -->
+   <div class="h-[100vh] w-full flex justify-center">
+    <div class="h-[85%] w-[90%] my-[80px] flex justify-center items-center">
+      <div class="h-[90%] w-[90%] flex justify-center items-center flex flex-col" id="bg-main">
+        <h1 class="font-[Google San] text-5xl text-center font-bold text-[var(--black)] my-3">Welcome to <span class="text-[var(--orange)]">CodeNest</span> </br>where <span class="text-[var(--orange)]">design</span> meets <span class="text-[var(--orange)]">code</span>.</h1>
+        <p class="text-[19px] font-medium text-gray-700 text-center">Where thoughts go from paper to production.</p>
+        <a href="#" class="bg-[var(--orange)] px-6 py-1.5 my-5 font-medium text-[var(--black)] rounded-xl hover:bg-[var(--yellow)] hover:text-white">Learn More</a>
+      </div>
+    </div>
+   </div>
+
+</div>
+<!-- main -->
+ <!-- about-section -->
+ <div class="min-h-screen w-full flex justify-center items-center px-4 py-8 md:py-0">
+  <div class="max-w-7xl w-full flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+    
+    <!-- Text Content -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start space-y-6">
+      <h1 class="font-bold text-3xl sm:text-4xl lg:text-[43px] text-[var(--orange)] text-center md:text-left">
+        A Little About Me.
+      </h1>
+      <p class="px-4 sm:px-8 md:px-0 text-base sm:text-lg lg:text-xl font-medium text-[var(--black)] text-center md:text-left">
+        Hey! I'm a frontend developer and graphic designer based in Kolkata, currently pursuing my diploma in graphic design. I love turning visual concepts into functional, responsive websites. This is my space to showcase my work, experiment with new ideas, and share what I create.
+      </p>
+      <a href="#" class="bg-[var(--orange)] px-6 py-1.5 text-xl sm:text-2xl font-bold text-[var(--black)] rounded-xl hover:bg-[var(--yellow)] hover:text-white transition-colors self-center md:self-end">
+        &rarr;
+      </a>
+    </div>
+    
+    <!-- Image -->
+    <div class="w-full sm:w-[80%] md:w-[40%] aspect-square bg-[var(--yellow)] flex justify-center items-center rounded-full">
+      <img src="./img/undraw_hello_ccwj.svg" alt="Illustration" class="w-[70%]">
+    </div>
+    
+  </div>
+  <!--  about - section end -->
+</div>
+<!-- project section -->
+ <div class="bg-amber-300 h-[100vh] w-full"></div>
+
+</body>
+</html>
