@@ -21,8 +21,16 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 90%, 100%;
+      border-top-right-radius: 30px;
     }
-  </style>
+    #debian{
+      background: url('./img/debian-logo.png') no-repeat center center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 90%, 100%;
+      border-top-right-radius: 30px;
+    }
+    </style>
     <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <div class="bg-white">
@@ -115,7 +123,24 @@
   <!--  about - section end -->
 </div>
 <!-- project section -->
- <div class="bg-amber-300 h-[100vh] w-full "></div>
+ <div class="h-[100vh] w-full  flex justify-center items-center">
+  <div class="w-[90%] h-[73%] border-2 border-[var(--yellow)] rounded-3xl flex flex-col justify-center items-center lg:h-[90%] flex-row-reverse">
+    <div class="w-[100%] h-full align-center p-10 flex flex-col justify-center lg:w-[50%]">
+      <h1 class="text-[20px] lg:text-4xl font-bold text-[var(--orange)] capitalize mb-5">ongoing project</h1>
+      <p class="text-[15px] lg:text-[17px] text-[var(--black)] font-medium mb-5">NOS OS is a lightweight Linux operating system based on Debian 12, built for work and ease of use. 
+        The goal is to make Linux as usable, simple, and user-friendly as possible for everyone.
+      </p>
+      <p class="text-[15px] lg:text-[20px] text-[var(--black)] font-semibold mb-5">Project Focus.</p>
+      <ul>
+        <li><a href="" class="text-[15px] lg:text-[17px] text-[var(--black)] font-medium mb-5"><span class="text-[var(--yellow)]">&#9679;</span> Beginner-friendly experience</a></li>
+        <li><a href="" class="text-[15px] lg:text-[17px] text-[var(--black)] font-medium mb-5"><span class="text-[var(--yellow)]">&#9679;</span> Optimized for older hardware</a></li>
+        <li><a href="" class="text-[15px] lg:text-[17px] text-[var(--black)] font-medium mb-5"><span class="text-[var(--yellow)]">&#9679;</span> Clean, minimal, and reliable</a></li>
+      </ul>
+      <a href="#" class=" text-[5px] bg-[var(--orange)] w-fit px-5 py-2 text-[16px] rounded-2xl mt-5 capitalize font-medium text-white hover:bg-[var(--yellow)] lg:text[20px]">learn more</a>
+    </div>
+    <div class="w-[50%] h-full hidden lg:block" id="debian"></div>
+  </div>
+ </div>
 
 </body>
 </html>
